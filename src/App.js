@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MessageList from './components/MessageList/MessageList'
+import SendMessageForm from './components/SendMessageForm/SendMessageForm';
 import Chatkit from '@pusher/chatkit';
 
 const instanceLocator = 'v1:us1:d855e2ce-509d-4390-929f-3a775bd20a11';
@@ -43,6 +44,7 @@ class App extends Component {
     return (
       <div className="App">
      <MessageList messages={this.state.messages}/>
+     <SendMessageForm/>
       </div>
     );
   }
